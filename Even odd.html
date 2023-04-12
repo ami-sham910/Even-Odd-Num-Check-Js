@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even Number Or Odd Number Check</title>
+
+</head>
+<script>
+    var num, temp;
+    function fun() {
+        num = parseInt(document.getElementById("num").value);
+        temp = document.getElementById("respara");
+        temp.style.display = "block";
+        if (num % 2 == 0)
+            document.getElementById("res").innerHTML = "Even";
+        else
+            document.getElementById("res").innerHTML = "odd";
+    }
+</script>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        margin-top: 2rem;
+        background-color: #fff;
+        margin: auto;
+        padding: auto;
+        width: 40vw;
+    }
+
+    .container h3 {
+        margin-top: 10px;
+        font-weight: bold;
+        margin-bottom: 12px;
+    }
+
+    .container button {
+        margin-left: 117px;
+        border: 1px solid black;
+        padding: 0.5rem;
+        background-color: #bbb;
+
+    }
+
+    .container button:hover {
+        background-color: #fff;
+        font-weight: bold;
+    }
+
+    .container input {
+        background-color: #bbb;
+        padding: 4px;
+    }
+    .container input:hover{
+        background-color: #fff;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h3>
+            Even Odd Number Check
+        </h3>
+        <p>
+            Please Enter Your Number: <input id="num" type="text" required placeholder="Number">
+        </p>
+        <br>
+        <button onclick="fun()">Click Now</button>
+        <p id="respara" style="display: none;">Result <span id="res"></span> Number</p>
+    </div>
+</body>
+
+</html>
